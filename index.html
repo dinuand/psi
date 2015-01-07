@@ -16,20 +16,27 @@
       <h1>PSI Questionnaire Project</h1>      
       <p><i>"It's just a quest..."</i></p>     
     </div>
-    <form class="form-inline" role="form">
-      <div class="form-group">
-        <label for="surname">Prenume:</label>
-        <input type="surname" class="form-control" id="surname" placeholder="Introduceti prenume">
+    </br></br></br>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="centering text-center">
+          <form class="form-inline" role="form">
+            <div class="form-group">
+              <label for="surname">Prenume:</label>
+              <input type="surname" class="form-control" id="surname" placeholder="Introduceti prenume" onclick="login()">
+            </div>
+            <div class="form-group">
+              <label for="name">Nume:</label>
+              <input type="name" class="form-control" id="name" placeholder="Introduceti nume" onclick="login()">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+            <a href="part1.html" class="stylish-button" onclick="login()" id="loginButton">Some words</a>
+          </form>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="name">Nume:</label>
-        <input type="name" class="form-control" id="name" placeholder="Introduceti nume">
-      </div>
-      <div class="checkbox">
-        <label><input type="checkbox"> Remember me</label>
-      </div>
-      <a href="part1.html" class="stylish-button">Some words</a>
-    </form>
+    </div>
   </div>
 
 </body>
@@ -52,3 +59,5 @@
     text-shadow:#FE6 0 1px 0
 }
 </style>
+
+<script src="app.js"></script>
