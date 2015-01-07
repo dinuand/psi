@@ -7,70 +7,322 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
 
+<link rel="stylesheet" type="text/css" href="style.css">
 <div class="container">
-  <h2>Form control: inline radio buttons</h2>
+
+  <h2>Welcome to the Trait Emotional Intelligence Questionnaire!</h2>
+  </br>
+<div class= "imgtext">
+<div class = "imagine">
+<img src="quest.jpg" class="img-responsive" alt="Cinque Terre">
+</div>
+<div class = "text">
+<h5>
+Vă rugăm să răspundeţi la fiecare din afirmaţiile de mai jos bifând numărul care reflectă cel mai bine gradul dvs. de acord sau dezacord cu afirmaţia. Nu vă gândiţi prea mult la semnificaţia exactă a afirmaţiilor. Lucraţi repede şi încercaţi să răspundeţi cât mai exact  posibil. Nu există răspunsuri bune sau rele Sunt şapte răspunsuri pentru fiecare afirmaţie, de la Dezacord total (numărul 1) la Acord total (numărul 7).
+</h5>
+</br>
+<h3>
+(Dezacord Total) 1 ... 2 ... 3 ... 4 ... 5 ... 6 ... 7 (Acord Total)
+</h3>
+</div>
+</div>
+</br>
   <div class="progress">
     <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar"
-    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:2%">
-      2% Complete (danger)
+    aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width:1%">1% Complete
     </div>
   </div>
-  <p>1. Pentru mine nu este o problema sa-mi exprim emotiile prin cuvinte.</p>
-  <form role="form">
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option1" onclick="markAsSelected(1, 1)">1
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option2" onclick="markAsSelected(1, 2)">2
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option3" onclick="markAsSelected(1, 3)">3
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option4" onclick="markAsSelected(1, 4)">4
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option5" onclick="markAsSelected(1, 5)">5
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option6" onclick="markAsSelected(1, 6)">6
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option7" onclick="markAsSelected(1, 7)">7
-    </label>
-  </form>
-  <p></p>
-  <p>2. Adesea am dificultăţi în a vedea lucrurile din punctul de vedere al altei persoane. </p>
-  <form role="form">
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option1" onclick="markAsSelected(2, 1)">1
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option2" onclick="markAsSelected(2, 2)">2
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option3" onclick="markAsSelected(2, 3)">3
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option4" onclick="markAsSelected(2, 4)">4
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option5" onclick="markAsSelected(2, 5)">5
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option6" onclick="markAsSelected(2, 6)">6
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio" id="option7" onclick="markAsSelected(2, 7)">7
-    </label>
-  </form>
+  </br></br>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="centering text-center">
+      <p><b>1. Pentru mine nu este o problema sa-mi exprim emotiile prin cuvinte.</b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(1, 1);">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(1, 2);">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(1, 3);">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(1, 4);">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(1, 5);">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(1, 6);">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(1, 7);">7
+        </label>
+      </form>
+      
+      </br></br>
+
+      <p><b>2. Adesea am dificultăţi în a vedea lucrurile din punctul de vedere al altei persoane. </b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(2, 1);">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(2, 2);">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(2, 3);">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(2, 4);">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(2, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(2, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(2, 7)">7
+        </label>
+      </form>
+      </br></br>
+
+      <p><b>3. În general, sunt o persoană foarte motivată.</b> </p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(3, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(3, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(3, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(3, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(3, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(3, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(3, 7)">7
+        </label>
+      </form>
+
+      </br></br>
+
+      <p><b>4.  De obicei, mi se pare dificil să-mi controlez emoţiile. </b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(4, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(4, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(4, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(4, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(4, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(4, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(4, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>5.  În general, nu găsesc că viaţa este agreabilă.</b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(5, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(5, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(5, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(5, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(5, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(5, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(5, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>6. Reuşesc să comunic eficient cu alte persoane.   </b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(6, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(6, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(6, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(6, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(6, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(6, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(6, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>7.  Am tendinţa să-mi schimb frecvent dispoziţia.</b> </p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(7, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(7, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(7, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(7, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(7, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(7, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(7, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>8.  De multe ori nu pot sa-mi dau seama ce emoţii simt.</b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(8, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(8, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(8, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(8, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(8, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(8, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(8, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>9.  Simt că am multe calităţi.</b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(9, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(9, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(9, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(9, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(9, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(9, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(9, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <p><b>10.  Adesea, îmi este dificil să lupt pentru drepturile mele.</b></p>
+      <form role="form">
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option1" onclick="localStorage.setItem(10, 1)">1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option2" onclick="localStorage.setItem(10, 2)">2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option3" onclick="localStorage.setItem(10, 3)">3
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option4" onclick="localStorage.setItem(10, 4)">4
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option5" onclick="localStorage.setItem(10, 5)">5
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option6" onclick="localStorage.setItem(10, 6)">6
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio" id="option7" onclick="localStorage.setItem(10, 7)">7
+        </label>
+      </form>  </br></br>
+
+      <a href="part2.html" class="stylish-button">Continua</a>
+      </br></br></br>
+    </div>
+
+  </div>
+  </div>
+
 
 </div>
 
 </body>
 </html>
 
-<script src="app.js"></script>
+<style type="text/css">
+.stylish-button {
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    color:#333;
+    background-color:#FA2;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:none;
+    font-size:16px;
+    font-weight:700;
+    padding:4px 16px;
+    text-shadow:#FE6 0 1px 0
+}
+</style>

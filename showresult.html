@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PSI Questionnaire Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+    <div class="jumbotron">
+      <h1>Final results from the questionnaire</h1>      
+      <p><i>Thank you!</i></p>     
+    </div>
+    </br></br></br></br>
+    </div>
+
+    <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="centering text-center">
+                <button class="stylish-button" onclick="myFunction()">Afisare rezultate</button>
+                </br></br></br>
+              <p id="demo"></p>
+
+              <script>
+                function myFunction() {
+                var answer = []; 
+                for (i = 1; i <= 30; i++) {
+                    answer[i] = parseInt(localStorage.getItem(i));
+                }
+
+                var desch = [2,4,5,7,8,10,12,13,14,16,18,22,25,26,28];
+                for (i = 0; i < 15; i++){
+                    answer[desch[i]] = 8 - answer[desch[i]];
+                }
+                var ei=0, wellbeing=0,selfcontrol=0,emotionality=0,sociability=0;
+                for (i = 1; i<= 30; i++){
+                    ei = parseInt(ei + answer[i]);
+                }
+                ei = ei / 30;
+                wellbeing = answer[5] + answer[20] + answer [9] + answer[24] + answer[12] + answer[27];
+                wellbeing = wellbeing /6;
+                selfcontrol = answer[4] + answer[19] + answer[7] + answer [22] + answer [15] + answer[30];
+                selfcontrol = selfcontrol / 6;
+                emotionality = answer[1] + answer[16] + answer[2] + answer[17] + answer[8] + answer[23] + answer[13] + answer[28];
+                emotionality = emotionality /8;
+                sociability = answer[6] + answer[21] + answer[10] + answer[25] + answer[11] + answer[26];
+                sociability = sociability /6;
+
+                var s = "";
+                s += "Wellbeing factor: " + parseFloat(wellbeing).toFixed(2) + "<br>";
+                s += "Selfcontrol factor: " + parseFloat(selfcontrol).toFixed(2) + "<br>";
+                s += "Emotionality factor: " + parseFloat(emotionality).toFixed(2) + "<br>";
+                s += "Sociability factor: " + parseFloat(sociability).toFixed(2) + "<br>";
+                s += "Global total score: " + parseFloat(ei).toFixed(2) + "<br>";
+
+                document.getElementById("demo").innerHTML = s;
+                }
+              </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style type="text/css">
+.stylish-button {
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+    color:#333;
+    background-color:#FA2;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:none;
+    font-size:16px;
+    font-weight:700;
+    padding:4px 16px;
+    text-shadow:#FE6 0 1px 0
+}
+</style>

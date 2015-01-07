@@ -1,13 +1,14 @@
-var selected = [];
-var log = 0;
-loginButton.disabled = 'true';
+selected = [];
 
 function markAsSelected (index, value) {
-	selected[index] = value;
-	document.write(index, selected[index]);
+    localStorage.setItem(index, value);
+    selected[index] = value;
 }
 
-function login () {
-	log = log + 1;
-	if (log >= 2) loginButton.disabled = 'false';
+function getScore (index) {
+    return selected[index];
+}
+
+function printeaza (index) {
+    document.write(index, selected[index]);
 }
